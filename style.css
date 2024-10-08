@@ -19,7 +19,7 @@ body {
 /* Header */
 header {
     text-align: center;
-    padding: 40px;
+    padding: 20px 0 10px; /* Reduce padding bottom to reduce the gap */
     background-color: #1F1F1F;
     color: #ffffff;
     border-bottom: 2px solid #333;
@@ -28,12 +28,25 @@ header {
 h1 {
     font-size: 3em;
     font-weight: 700;
-    margin-bottom: 20px;
+    margin-bottom: 10px; /* Reduce margin bottom for a smaller gap */
+}
+
+/* Logo Section */
+.logo-section {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0 20px; /* Reduced top margin for a smaller gap */
+}
+
+.logo {
+    width: 200px;
+    height: 200px;
+    object-fit: contain;
 }
 
 /* Description Section */
 .description {
-    margin: 40px auto;
+    margin: 30px auto;
     max-width: 800px;
     text-align: center;
     color: #E0E0E0;
@@ -43,6 +56,55 @@ p {
     font-size: 1.2em;
     margin-bottom: 30px;
     color: #B0BEC5;
+}
+
+/* Screenshots Section */
+.screenshots {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin: 40px 0;
+}
+
+.screenshot {
+    width: 200px;  /* For smaller screens */
+    aspect-ratio: 9 / 16;
+    object-fit: cover;
+    border: 2px solid #333;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+}
+
+.screenshot:hover {
+    transform: scale(1.05);
+}
+
+/* Download Section */
+.download {
+    text-align: center;
+    margin: 40px auto;
+}
+
+.download h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.download-links {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.store-icon {
+    width: 150px;
+    height: auto;
+    transition: transform 0.3s ease;
+}
+
+.store-icon:hover {
+    transform: scale(1.1);
 }
 
 /* Call-to-Action (CTA) Button */
@@ -68,29 +130,21 @@ p {
     transform: translateY(-2px);
 }
 
-/* Privacy Policy Section */
-.privacy-content {
-    max-width: 800px;
-    margin: 40px auto;
-    text-align: left;
-    color: #E0E0E0;
-}
-
-.privacy-content h2 {
-    font-size: 1.8em;
-    font-weight: 500;
-    margin-top: 30px;
-    color: #90CAF9;
-}
-
-.privacy-content p {
-    font-size: 1.1em;
+/* Credits Section */
+.credits {
+    text-align: center;
+    margin: 40px 0;
     color: #B0BEC5;
+}
+
+.credits p {
+    margin-bottom: 10px;
+    font-size: 1.1em;
 }
 
 /* Footer */
 footer {
-    margin-top: 60px;
+    margin-top: 40px;
     text-align: center;
     padding: 20px;
     background-color: #1F1F1F;
@@ -108,8 +162,56 @@ footer {
         padding: 0 20px;
     }
 
+    .logo {
+        width: 100%;
+        max-width: 500px;
+    }
+
+    .screenshots {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .screenshot {
+        width: 100%;
+        max-width: 300px;
+    }
+
+    .download-links {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .store-icon {
+        width: 200px;
+    }
+
     .button {
         padding: 12px 25px;
         font-size: 1.1em;
     }
+
+    /* Back Button */
+.back-button {
+    text-align: center;
+    margin: 20px 0;
+}
+
+.back-button .button {
+    background-color: #1E88E5;
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    border-radius: 30px;
+    font-size: 1.2em;
+    font-weight: 500;
+    box-shadow: 0 4px 12px rgba(30, 136, 229, 0.3);
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.back-button .button:hover {
+    background-color: #1565C0;
+    transform: translateY(-2px);
+}
+
 }
